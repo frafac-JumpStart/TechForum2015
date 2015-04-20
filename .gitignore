@@ -4,3 +4,6 @@
 node_modules/
 platforms/
 plugins/
+dev/app/lib/
+www/libs/
+dev/app/libs/
