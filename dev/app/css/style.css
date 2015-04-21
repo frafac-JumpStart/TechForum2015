@@ -37,6 +37,7 @@
     font-style: italic;
     margin-right: 10px;
     text-align: center;
+    width: 100%;
 }
 .activeDay{
     background-color: #e5e5e5;
@@ -203,7 +204,7 @@ legend{
 \*****************************/
 
 .no-border{
-    border : 0px;
+    border : none;
 }
 
 /*****************************\
@@ -213,6 +214,11 @@ legend{
 .bar.bar-positive {
     background-color: #0066A1;
 }
-.tab-item.tab-item-active{
+
+.tabs-icon-top > .tabs .tab-item{
+    border-top : 1px solid #CCC;
+}
+
+.tabs-striped .tab-item.tab-item-active, .tabs-striped .tab-item.active, .tabs-striped .tab-item.activated{
     border-top : 2px solid #0066A1;
 }
