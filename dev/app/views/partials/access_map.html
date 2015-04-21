@@ -46,7 +46,7 @@
             </div>
 
             <!-- GOOGLE MAP -->
-            <google-map center="map.center" zoom="map.zoom" draggable="true" refresh="true">
+            <ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" refresh="true">
                 <marker coords="map.markerWorldline">
                     <window isIconVisibleOnClick="true">
                         <p>
@@ -56,7 +56,7 @@
                     </window>
                 </marker>
                 <marker coords="map.markerYou"></marker>
-            </google-map>
+            </ui-gmap-google-map>
         </div>
         <p ng-hide="connected" class="center">You don't have a internet connection to display a map</p>
 

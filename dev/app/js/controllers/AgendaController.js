@@ -1,7 +1,8 @@
 /**
  * Agenda Controller
  */
-app.controller('AgendaController', ['$scope','ConferencesService','$state','$ionicPopup', function($scope,ConferencesService,$state,$ionicPopup)
+angular.module('app')
+    .controller('AgendaController', ['$scope','ConferencesService','$state','$ionicPopup', function($scope,ConferencesService,$state,$ionicPopup)
     {
         console.log('--- AgendaController ---');
 

@@ -1,7 +1,8 @@
 /**
  * DetailConference Controller
  */
-app.controller('DetailConferenceController', ['$scope','$stateParams','ConferencesService','MessagesService','$ionicNavBarDelegate','AgendaService','$ionicPopup','ConnectionService', function($scope,$stateParams,ConferencesService,MessagesService,$ionicNavBarDelegate,AgendaService,$ionicPopup,ConnectionService)
+angular.module('app')
+    .controller('DetailConferenceController', ['$scope','$stateParams','ConferencesService','MessagesService','$ionicNavBarDelegate','AgendaService','$ionicPopup','ConnectionService', function($scope,$stateParams,ConferencesService,MessagesService,$ionicNavBarDelegate,AgendaService,$ionicPopup,ConnectionService)
     {
         console.log('--- DetailConferenceController ---');
 

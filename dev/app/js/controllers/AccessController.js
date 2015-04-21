@@ -1,7 +1,8 @@
 /**
  * Access Controller
  */
-app.controller('AccessController', ['$scope','ConnectionService', function($scope,ConnectionService)
+angular.module('app')
+    .controller('AccessController', ['$scope','ConnectionService', function($scope,ConnectionService)
     {
         console.log('--- AccessController ---');
         $scope.fromLilleFlandre = false;
