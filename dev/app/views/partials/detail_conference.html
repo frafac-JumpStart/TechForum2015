@@ -47,37 +47,5 @@
                 </button>
             </div>
         </section>
-
-        <!-- POST A COMMENT -->
-        <section>
-            <fieldset>
-                <legend>Post a comment</legend>
-                Name : <input class="field-comment" type="text" ng-model="newComment.name" placeholder=" name"/>
-
-                Content : <textarea rows="4" class="field-comment last-field-comment" type="text" ng-model="newComment.msg" placeholder=" Enter your message"></textarea>
-                <button class="button" ng-click="postComment(conference._id)">Send comment</button><br/>
-            </fieldset>
-        </section>
-
-        <!-- VIEW COMMENT FOR THIS CONFERENCE -->
-        <section>
-            <p class="title-comments">Comments</p>
-            <p ng-hide="comments.length">No comments for this conferences {{loadingComment}}</p>
-            <ion-list >
-                <tr>
-                <ion-item class="comment-item" ng-repeat="comment in comments | orderBy:'date':true">
-                    <div class="row">
-                        <p class="col"><strong>Name : {{comment.name}}</strong></p>
-                    </div>
-                    <div class="row">
-                        <p class="col italic">Date : {{comment.date | date : "MMM d, y h:mm:ss a"}}</p>
-                    </div>
-                    <div class="row">
-                        <textarea class="col">{{comment.msg}}</textarea>
-                    </div>
-                </ion-item>
-            </ion-list>
-        </section>
-
     </ion-content>
 </ion-view>
