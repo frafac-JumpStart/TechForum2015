@@ -13,7 +13,7 @@ app.factory('ConnectionService', function() {
              * We suppose user uses a internet connection and with a promise in angular
              * resource, we catch for success or error to retrieve a internet data.
              **/
-            if(ionic.Platform.isIOS() || ionic.Platform.isIPad()){
+            if(ionic.Platform.isIOS() || ionic.Platform.isIPad() || ionic.Platform.isWindowsPhone()){
                 return true;
             }else{
                 var networkState = navigator.connection.type;
