@@ -24,20 +24,37 @@
 /*****************************\
 *      Conference List        *
 \*****************************/
+.bar-subheader{
+    height: 50px;
+    top: 50px;
+    text-align: center;
+}
+.subheader-info{
+    padding: 0;
+}
+.subheader-info .col{
+    padding: 0;
+}
+.subheader-info .col .button{
+    min-width: 100px;
+}
+.conferences-content{
+    top: 65px;
+}
 .reload-conference{
     font-size: 24px;
 }
 .item{
     margin-bottom: 10px;
+    padding: 7px;
 }
 .item:first-child{
     margin-top:25px;
 }
 .nbConference{
     font-style: italic;
-    margin-right: 10px;
-    text-align: center;
     width: 100%;
+    line-height: 31px;
 }
 .activeDay{
     background-color: #e5e5e5;
@@ -47,10 +64,24 @@
 .activeConference{
     height: 160px;
 }
+.conference-title{
+    font-weight: bold;
+    padding: 0;
+}
+p.conferences-room {
+    border-right: 1px solid #CCC;
+    line-height: 50px;
+    padding: 0;
+}
 p.theme-conference{
     font-style: italic;
     font-weight: bold;
     color: #f0b840;
+    font-size: 11px;
+    padding: 0;
+}
+.conferences-info{
+    padding: 0;
 }
 p.center{
     text-align: center;
@@ -100,13 +131,8 @@ p.room-detail-conference{
     background: #F5F5F5 no-repeat 10px 15px;
     border: 1px solid #C0C0C0;
     color: #404040;
-    padding: 10px 10px 10px 10px;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    -moz-box-shadow: 3px 3px 6px 0 #A9A9A9;
-    -webkit-box-shadow: 3px 3px 6px #A9A9A9;
-    box-shadow: 3px 3px 6px 0 #A9A9A9;
+    padding: 10px;
+    margin-top: 20px;
 }
 
 .schedule-tab{
@@ -120,26 +146,6 @@ p.room-detail-conference{
 *       Detail Conference     *
 \*****************************/
 
-textarea.field-comment, input.field-comment{
-    width: 99%;
-    border : 1px solid #e5e5e5;
-}
-.last-field-comment{
-    margin-bottom: 5px;
-}
-.title-comments{
-    font-style: italic;
-    margin-top: 10px;
-}
-.item.comment-item:first-child{
-    margin-top:5px;
-}
-legend{
-    border : 0px;
-    width: auto;
-    padding-left: 20px;
-    padding-right: 20px;
-}
 .description{
     text-indent:20px;
     padding: 5px;
