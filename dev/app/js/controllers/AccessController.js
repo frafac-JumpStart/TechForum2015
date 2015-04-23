@@ -32,20 +32,16 @@ angular.module('app')
                     latitude: $scope.worldlineGPS.latitude,
                     longitude: $scope.worldlineGPS.longitude
                 },
-                markerWorldline: {
-                    "latitude": $scope.worldlineGPS.latitude,
-                    "longitude": $scope.worldlineGPS.longitude,
-                    "showWindow": true,
-                    "title": "Worldine"
-                },
-                markerYou: {
-                    "latitude": $scope.worldlineGPS.latitude,
-                    "longitude": $scope.worldlineGPS.longitude,
-                    "showWindow": true,
-                    "title": "Your Position"
-                },
                 zoom: 14
             };
+            $scope.marker = {
+                id:0,
+                coords:{
+                    latitude: $scope.map.center.latitude,
+                    longitude: $scope.map.center.longitude
+                }
+            };
+
         }else{
             $scope.connected = false;
         }
@@ -56,6 +52,8 @@ angular.module('app')
         $scope.locateWorldline = function(){
             $scope.map.center.latitude = $scope.worldlineGPS.latitude;
             $scope.map.center.longitude = $scope.worldlineGPS.longitude;
+            $scope.marker.coords.latitude = $scope.worldlineGPS.latitude;
+            $scope.marker.coords.longitude = $scope.worldlineGPS.longitude;
         };
 
         /** User Geolocalisation **/
@@ -63,8 +61,8 @@ angular.module('app')
             navigator.geolocation.getCurrentPosition(
                 function(position){
                     $scope.$apply(function(){
-                        $scope.map.markerYou.latitude = position.coords.latitude;
-                        $scope.map.markerYou.longitude = position.coords.longitude;
+                        $scope.marker.coords.latitude = position.coords.latitude;
+                        $scope.marker.coords.longitude = position.coords.longitude;
                         $scope.map.center.latitude = position.coords.latitude;
                         $scope.map.center.longitude = position.coords.longitude;
                     });
