@@ -1,7 +1,7 @@
 /**
  * Agenda Service
  */
-app.factory('AgendaService',['$ionicPopup', function($ionicPopup) {
+app.factory('AgendaService',['$ionicPopup','$state', function($ionicPopup,$state) {
 
     var agendaFactory = {
 
@@ -20,6 +20,7 @@ app.factory('AgendaService',['$ionicPopup', function($ionicPopup) {
                         agenda = [];
                         agenda.push(idConference);
                         localStorage.setItem('myAgenda',JSON.stringify(agenda));
+                        $state.go('tab.agenda', {reload: true}); 
                     }
                 });
             }else{
@@ -41,6 +42,7 @@ app.factory('AgendaService',['$ionicPopup', function($ionicPopup) {
                         if(res) {
                             agenda.push(idConference);
                             localStorage.setItem('myAgenda',JSON.stringify(agenda));
+                            $state.go('tab.agenda', {reload: true});
                         }
                     });
                 }

@@ -63,6 +63,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
   })
   // Tab Agenda
   .state('tab.agenda', {
+    cache:false,
     url: '/agenda',
     views: {
       'agenda-tab': {
