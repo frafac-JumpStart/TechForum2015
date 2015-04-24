@@ -36,7 +36,7 @@
     padding: 0;
 }
 .subheader-info .col .button{
-    min-width: 100px;
+    min-width: 95%;
 }
 .conferences-content{
     top: 65px;
@@ -64,9 +64,10 @@
 .activeConference{
     height: 160px;
 }
-.conference-title{
+p.conference-title{
     font-weight: bold;
     padding: 0;
+    white-space: normal;
 }
 p.conferences-room {
     border-right: 1px solid #CCC;
