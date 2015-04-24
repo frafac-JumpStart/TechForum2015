@@ -139,8 +139,8 @@ p.room-detail-conference{
 .schedule-tab{
     border : 1px solid #e5e5e5;
     background-color: #e5e5e5;
-    padding :5px;
-    margin-top: 20px;
+    padding : 3px;
+    margin-top: 15px;
 }
 
 /*****************************\
@@ -161,6 +161,9 @@ p.room-detail-conference{
 /*****************************\
 *          Agenda             *
 \*****************************/
+p{
+    margin: 0;
+}
 .delete-conference-in-agenda{
     border-radius: 10px;
     color : white;
@@ -186,8 +189,36 @@ p.room-detail-conference{
     font-weight: bold;
     color : white
 }
-
-
+.agenda-conf{
+    padding: 0;
+}
+.agenda-conf .col{
+    padding: 0;
+}
+.agenda-conf .col-90{
+    line-height: 41px;
+    padding: 0;
+}
+.button.ion-plus-circled:before{
+    font-size: 28px;
+    vertical-align: top;
+    padding: 0;
+    line-height: normal;
+    color: #017B1D;
+}
+.button.ion-plus-circled:after{
+    content: none;
+}
+.button.ion-trash-b:before{
+    font-size: 28px;
+    vertical-align: top;
+    padding: 0;
+    line-height: normal;
+    color: #C80337;
+}
+.button.ion-trash-b:after{
+    content: none;
+}
 /*****************************\
 *          Map                *
 \*****************************/

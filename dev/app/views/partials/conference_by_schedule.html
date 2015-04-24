@@ -11,10 +11,19 @@
         <div class="schedule-tab" >
             <p ng-model="schedule.when.start"><strong>Day : {{day}} - {{schedule}}</strong> <br/>You can to add</p>
             <ion-item ng-repeat="conference in conferences | scheduleByConference:schedule:day | orderBy:'where'" ng-click="viewConference(conference._id)" >
-                <div class ="row">
-                    <p class="col col-20 room-conference">R {{conference.where}}</p>
-                    <p class="col col-80"><strong>{{conference.title}}</strong></p>
-                </div>
+                <div ng-class="{activeConference: conference._id==selectedConferenceId}">
+                        <div class ="row">
+                            <p class="conferences-room col col-10">R{{conference.where}}</p>
+                            <div class="col col-90 conferences-info">
+                                <div class="row">
+                                    <p class="conference-title col col-100">{{conference.title}}</p>
+                                </div>
+                                <div class="row">
+                                    <p class="col col-100 theme-conference">{{conference.theme}}</p>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
             </ion-item>
         </div>
     </ion-content>
