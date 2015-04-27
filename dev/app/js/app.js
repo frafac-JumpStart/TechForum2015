@@ -1,6 +1,6 @@
 
 // Modules declaration
-var app = angular.module('app', ['ionic','ngResource','techForum.filters','uiGmapgoogle-maps'])
+var app = angular.module('app', ['ionic','ngResource','techForum.filters'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {

@@ -2,7 +2,7 @@
  * Access Controller
  */
 angular.module('app')
-    .controller('AccessController', ['$scope','ConnectionService', function($scope,ConnectionService)
+    .controller('AccessController', ['$scope', function($scope)
     {
         console.log('--- AccessController ---');
         $scope.fromLilleFlandre = false;
@@ -23,52 +23,20 @@ angular.module('app')
             latitude: 50.567593,
             longitude: 3.029413
         };
-
-        if(ConnectionService.isConnected()) {
-            $scope.connected = true;
-            /** Configuration Map **/
-            $scope.map = {
-                center: {
-                    latitude: $scope.worldlineGPS.latitude,
-                    longitude: $scope.worldlineGPS.longitude
-                },
-                zoom: 14
-            };
-            $scope.marker = {
-                id:0,
-                coords:{
-                    latitude: $scope.map.center.latitude,
-                    longitude: $scope.map.center.longitude
-                }
-            };
-
-        }else{
-            $scope.connected = false;
-        }
-
-
-
-        /** WorldLine Localisation **/
-        $scope.locateWorldline = function(){
-            $scope.map.center.latitude = $scope.worldlineGPS.latitude;
-            $scope.map.center.longitude = $scope.worldlineGPS.longitude;
-            $scope.marker.coords.latitude = $scope.worldlineGPS.latitude;
-            $scope.marker.coords.longitude = $scope.worldlineGPS.longitude;
+            
+        $scope.getMyGps = function(){
+            navigator.geolocation.getCurrentPosition(function(pos) {
+                launchnavigator.navigate(
+                    [$scope.worldlineGPS.latitude, $scope.worldlineGPS.longitude],
+                    [pos.coords.latitude, pos.coords.longitude],
+                    function(){
+                        alert("Plugin success");
+                    },
+                    function(error){
+                    alert("Plugin error: "+ error);
+                    }
+                );
+            });
         };
 
-        /** User Geolocalisation **/
-        $scope.getMyposition = function(){
-            navigator.geolocation.getCurrentPosition(
-                function(position){
-                    $scope.$apply(function(){
-                        $scope.marker.coords.latitude = position.coords.latitude;
-                        $scope.marker.coords.longitude = position.coords.longitude;
-                        $scope.map.center.latitude = position.coords.latitude;
-                        $scope.map.center.longitude = position.coords.longitude;
-                    });
-                },function(error){
-                    $scope.positioninfo = error;
-                }
-            );
-        };
     }]);

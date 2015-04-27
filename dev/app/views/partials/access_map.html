@@ -37,20 +37,10 @@
             </div>
         </div>
 
-
-        <div ng-show="connected">
-            <!-- BUTTON GEOLOCALISATION -->
-            <div class="row">
-                <button class="col button-geo button button-positive" ng-click="locateWorldline()">Where is Worldline ?</button>
-                <button class="col button-geo button button-positive" ng-click="getMyposition()">Locate Me</button>
-            </div>
-
-            <!-- GOOGLE MAP -->
-            <ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" options="options">
-                <ui-gmap-marker coords="marker.coords" options="marker.options" events="marker.events" idkey="marker.id"></ui-gmap-marker>
-            </ui-gmap-google-map>
+        <!-- BUTTON GEOLOCALISATION -->
+        <div class="row">
+            <button class="col button-geo button button-positive" ng-click="getMyGps()">Show me the way</button>
         </div>
-        <p ng-hide="connected" class="center">You don't have a internet connection to display a map</p>
 
     </ion-content>
 </ion-view>

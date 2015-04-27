@@ -81,6 +81,7 @@ $ sh script
 ```bash
 For Android, IOS and wp8
 $ cordova plugin add org.apache.cordova.geolocation
+$ cordova plugin add uk.co.workingedge.phonegap.plugin.launchnavigator
 Only for Android
 $ cordova plugin add org.apache.cordova.network-information
 ```
