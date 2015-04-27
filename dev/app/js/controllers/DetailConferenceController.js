@@ -2,7 +2,7 @@
  * DetailConference Controller
  */
 angular.module('app')
-    .controller('DetailConferenceController', ['$scope','$stateParams','ConferencesService','MessagesService','$ionicHistory','AgendaService','$ionicPopup','ConnectionService', function($scope,$stateParams,ConferencesService,MessagesService,$ionicHistory,AgendaService,$ionicPopup,ConnectionService)
+    .controller('DetailConferenceController', ['$scope','$stateParams','ConferencesService','MessagesService','$ionicNavBarDelegate','AgendaService','$ionicPopup','ConnectionService', function($scope,$stateParams,ConferencesService,MessagesService,$ionicNavBarDelegate,AgendaService,$ionicPopup,ConnectionService)
     {
         console.log('--- DetailConferenceController ---');
 
@@ -41,7 +41,7 @@ angular.module('app')
 
         /** Return to conference list **/
         $scope.back =function(){
-            $ionicHistory.goBack();
+            $ionicNavBarDelegate.back();
         };
 
         /** Add a conference in agenda **/
