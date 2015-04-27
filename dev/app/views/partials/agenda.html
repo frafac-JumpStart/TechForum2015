@@ -39,7 +39,9 @@
                 <ion-item ng-repeat="conferenceAgenda in myAgenda | scheduleByConference:itemSchedule:day.day1" ng-click="viewConference(conferenceAgenda._id)" >
                     <div class ="row agenda-conf conferences-info">
                         <p class="conferences-room col col-10">R {{conferenceAgenda.where}}</p>
-                        <p class="conference-title col col-80">{{conferenceAgenda.title}}</p>
+                        <div class="col col-80">
+                            <p class="conference-title"><span>{{conferenceAgenda.title}}</span></p>
+                        </div>
                         <button class="col col-10 button button-icon icon ion-trash-b" ng-click="onItemDelete(conferenceAgenda._id);$event.stopPropagation()"></button>
                     </div>    
                 </ion-item>
@@ -101,18 +103,20 @@
             <div class="schedule-tab" ng-repeat="itemSchedule in mySchedule2">
                 <p ng-model="schedule.when.start">Start {{itemSchedule}}</p>
                 <ion-item ng-repeat="conferenceAgenda in myAgenda | scheduleByConference:itemSchedule:day.day2" ng-click="viewConference(conferenceAgenda._id)">
-                    <div class ="row">
-                        <p class="col col-20 room-conference">R {{conferenceAgenda.where}}</p>
-                        <p class="col col-80"><strong>{{conferenceAgenda.title}}</strong></p>
-                    </div>
-                    <div class="row">
-                        <span class="delete-conference-in-agenda" ng-click="onItemDelete(conferenceAgenda._id);$event.stopPropagation()">Delete</span>
+                    <div class ="row agenda-conf conferences-info">
+                        <p class="conferences-room col col-10">R {{conferenceAgenda.where}}</p>
+                        <div class="col col-80">
+                            <p class="conference-title"><span>{{conferenceAgenda.title}}</span></p>
+                        </div>
+                        <button class="col col-10 button button-icon icon ion-trash-b" ng-click="onItemDelete(conferenceAgenda._id);$event.stopPropagation()"></button>
                     </div>
                 </ion-item>
-                <div class="row" ng-hide ="(myAgenda  | scheduleByConference:itemSchedule:day.day2).length">
-                    <p class="col">You don't have a conference</p>
-                    <button class="button col" ng-click="viewConferenceWithTime(day.day2,itemSchedule);">Add conference</button>
+                <ion-item ng-hide ="(myAgenda  | scheduleByConference:itemSchedule:day.day2).length">
+                <div class="row agenda-conf">
+                    <p class="col col-90">You don't have a conference</p>
+                    <button class="col col-10 button button-icon icon ion-plus-circled" ng-click="viewConferenceWithTime(day.day2,itemSchedule);$event.stopPropagation()"></button>
                 </div>
+                </ion-item>
             </div>
 
             <div class="schedule-tab">

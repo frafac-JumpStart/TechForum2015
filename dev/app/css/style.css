@@ -48,6 +48,9 @@
     margin-bottom: 10px;
     padding: 7px;
 }
+.item p{
+    margin: 0;
+}
 .item:first-child{
     margin-top:25px;
 }
@@ -191,6 +194,17 @@ p{
 }
 .agenda-conf{
     padding: 0;
+}
+.agenda-conf div p{
+    padding: 0 5px;
+    line-height: 40px;
+
+}
+.agenda-conf div p span{
+    vertical-align: middle;
+    display: inline-block;
+    line-height: normal;
+    text-align: left;
 }
 .agenda-conf .col{
     padding: 0;

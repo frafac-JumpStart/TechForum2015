@@ -20,7 +20,7 @@ app.factory('AgendaService',['$ionicPopup','$state', function($ionicPopup,$state
                         agenda = [];
                         agenda.push(idConference);
                         localStorage.setItem('myAgenda',JSON.stringify(agenda));
-                        $state.go('tab.agenda', {reload: true}); 
+                        $state.go('tab.agenda'); 
                     }
                 });
             }else{
@@ -42,7 +42,7 @@ app.factory('AgendaService',['$ionicPopup','$state', function($ionicPopup,$state
                         if(res) {
                             agenda.push(idConference);
                             localStorage.setItem('myAgenda',JSON.stringify(agenda));
-                            $state.go('tab.agenda', {reload: true});
+                            $state.go('tab.agenda');
                         }
                     });
                 }
