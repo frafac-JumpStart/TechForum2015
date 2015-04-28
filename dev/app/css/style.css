@@ -241,7 +241,6 @@ p{
 }
 
 .button-geo{
-    margin :5px;
     padding: 0px;
     height: 20px;
 }
@@ -253,11 +252,16 @@ p{
 
 .worldline-information{
     text-align: left;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    border: 1px solid #e5e5e5;
 }
 .worldline-information li{
     font-weight: bold;
     line-height: 25px;
+}
+
+.button-gps{
+    padding: 0;
 }
 
 /*****************************\
