@@ -251,6 +251,15 @@ p{
     text-align: center;
 }
 
+.worldline-information{
+    text-align: left;
+    margin-bottom: 20px;
+}
+.worldline-information li{
+    font-weight: bold;
+    line-height: 25px;
+}
+
 /*****************************\
 *          Menu               *
 \*****************************/
