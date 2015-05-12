@@ -2,7 +2,7 @@
  * Access Controller
  */
 angular.module('app')
-    .controller('AccessController', ['$scope', function($scope)
+    .controller('AccessController', ['$scope','$ionicLoading', function($scope,$ionicLoading)
     {
         console.log('--- AccessController ---');
         $scope.fromLilleFlandre = false;
@@ -25,15 +25,18 @@ angular.module('app')
         };
             
         $scope.getMyGps = function(){
+            $ionicLoading.show();
             navigator.geolocation.getCurrentPosition(function(pos) {
                 launchnavigator.navigate(
                     [$scope.worldlineGPS.latitude, $scope.worldlineGPS.longitude],
                     [pos.coords.latitude, pos.coords.longitude],
                     function(){
-                        alert("Plugin success");
+                        $ionicLoading.hide();
+                        // alert("Plugin success");
                     },
                     function(error){
-                    alert("Plugin error: "+ error);
+                        $ionicLoading.hide();
+                        // alert("Plugin error: "+ error);
                     }
                 );
             });
