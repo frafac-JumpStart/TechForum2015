@@ -233,13 +233,12 @@ p{
 .button.ion-trash-b:after{
     content: none;
 }
+.button{
+    min-width: auto;
+}
 /*****************************\
 *          Map                *
 \*****************************/
-.list-map{
-    padding-left: 20px;
-}
-
 .button-geo{
     padding: 0px;
     height: 20px;
