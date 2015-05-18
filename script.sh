@@ -32,8 +32,4 @@ cp -r dev/app/css/* www/app/css
 cp -r dev/app/js/* www/app/js
 cp -r dev/app/libs/* www/app/libs
 
-echo "Copie des fichiers ionic.css"
-cp -r dev/asset/ionic/css/* www/app/libs/ionic/css
-
-
 echo "-- L'application TechForum 2015 contenu dans le dossier \"www\" peut être mise en production --"
