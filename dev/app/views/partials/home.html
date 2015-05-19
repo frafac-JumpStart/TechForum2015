@@ -34,8 +34,12 @@
                 </div>
                 <ion-item class="item-home" ng-repeat="conference in conferences  | scheduleByConference:nextSchedule:current_day.day | orderBy:'where'" ng-click="viewConference(conference._id)">
                     <div class ="row">
-                        <p class="col col-20 room-conference">R {{conference.where}}</p>
-                        <p class="col col-80"><strong>{{conference.title}}</strong></p>
+                        <p class="col col-10 conferences-room">R {{conference.where}}</p>
+                        <div class="col col-90 conferences-info">
+                            <div class="row">
+                                <p class="conference-title col col-100">{{conference.title}}</p>
+                            </div>
+                        </div> 
                     </div>
                 </ion-item>
         </ion-list>
