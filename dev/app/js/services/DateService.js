@@ -32,7 +32,7 @@ app.factory('DateService', function() {
         /** get the earliest date a function of the start time of phone **/
         nextSchedule : function(tab,date){
             //la date la plus ancien pour avoir un grand timestamps
-            var res = new Date(2014,5,5)-date;
+            var res = new Date(2015,5,3)-date;
             tab.sort();
 
             for(i = 0; i < tab.length;i++){
