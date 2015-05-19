@@ -58,6 +58,7 @@ Then run:
 ```bash
 $ cd dev
 $ npm install
+$ bower install
 $ cd ..
 ```
 
@@ -119,6 +120,8 @@ Add Splascreen and Icon
 $  cp -r dev/res/wp8/* platforms/wp8/
 To launch a emulator (install windows phones 8.1 sdk)
 $ cordova emulate wp8
+to launch in your phone
+$ cordova run wp8
 ```
 
 
