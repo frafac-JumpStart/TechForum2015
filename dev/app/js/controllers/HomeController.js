@@ -6,9 +6,9 @@ app.controller('HomeController', ['$scope','DateService','ConferencesService','$
 
         console.log('--- HomeController ---');
 
-        var day1 = new Date(2015,6,02);
-        var day2 = new Date(2015,6,03);
-        var dayEnd = new Date(2015,6,03);
+        var day1 = new Date(2015,5,02);
+        var day2 = new Date(2015,5,03);
+        var dayEnd = new Date(2015,5,03);
         var today = new Date();
         var todayShort = new Date(today.getFullYear(),today.getMonth(),today.getDate());
 
