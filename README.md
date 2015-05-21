@@ -91,7 +91,7 @@ $ cordova plugin add org.apache.cordova.network-information
 ```bash
 $ cordova platform add android
 Add Splascreen and Icon
-$  cp -r dev/res/android/res platforms/android/
+$  cp -r dev/res/android/res/* platforms/android/res
 $ cordova build android
 To launch a emulator (you must have Android ADB and a AVD (Android virtual Device)
 $ cordova emulate android
