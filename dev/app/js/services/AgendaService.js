@@ -14,7 +14,7 @@ app.factory('AgendaService',['$ionicPopup','$state', function($ionicPopup,$state
             if(localStorage.getItem('myAgenda') === null){
                 $ionicPopup.confirm({
                     title: 'Add conference',
-                    content: 'Do you want add this conference on your agenda ?'
+                    content: 'Do you want to add this conference in your agenda ?'
                 }).then(function(res) {
                     if(res) {
                         agenda = [];
@@ -29,7 +29,7 @@ app.factory('AgendaService',['$ionicPopup','$state', function($ionicPopup,$state
                     if(value == idConference){
                         $ionicPopup.alert({
                             title: 'Impossible',
-                            content: 'You are already to add this conference'
+                            content: 'You have already booked this conference'
                         });
                         alreadyExist = true;
                     }
@@ -37,7 +37,7 @@ app.factory('AgendaService',['$ionicPopup','$state', function($ionicPopup,$state
                 if(alreadyExist === false){
                     $ionicPopup.confirm({
                         title: 'Add conference',
-                        content: 'Do you want add this conference on your agenda ?'
+                        content: 'Do you want to add this conference in your agenda ?'
                     }).then(function(res) {
                         if(res) {
                             agenda.push(idConference);

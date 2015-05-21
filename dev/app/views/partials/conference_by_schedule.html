@@ -9,7 +9,7 @@
     <ion-content class="has-header has-tabs" padding="true">
 
         <div class="schedule-tab" >
-            <p ng-model="schedule.when.start"><strong>Day : {{day}} - {{schedule}}</strong> <br/>You can to add</p>
+            <p ng-model="schedule.when.start"><strong>Day : {{day}} - {{schedule}}</strong> <br/>You can add :</p>
             <ion-item ng-repeat="conference in conferences | scheduleByConference:schedule:day | orderBy:'where'" ng-click="viewConference(conference._id)" >
                 <div ng-class="{activeConference: conference._id==selectedConferenceId}">
                         <div class ="row">

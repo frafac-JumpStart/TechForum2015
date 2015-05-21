@@ -45,7 +45,7 @@ app.controller('ConferencesController', ['$scope','ConferencesService','$ionicLo
                         $ionicLoading.hide();
                     },
                     function(reason){
-                        alert('Unable to retrieve conferences list');
+                        alert('Unable to retrieve the list of conferences.');
                         $ionicLoading.hide();
                     }
                 );
@@ -71,21 +71,21 @@ app.controller('ConferencesController', ['$scope','ConferencesService','$ionicLo
                             $ionicLoading.hide();
                             $ionicPopup.alert({
                                 title: 'Update conference',
-                                content: 'You have correctly update conference list'
+                                content: 'You have correctly updated the list of conferences'
                             });
                         }else{
                             $ionicLoading.hide();
                             $ionicPopup.alert({
                                 title: 'Update conference',
-                                content: 'You have already a last conference list'
+                                content: 'You already have an up to date list of conferences'
                             });
                         }
                     },
                     function(reason){
                         $ionicLoading.hide();
                         $ionicPopup.alert({
-                            title: ' Unable to update conference list',
-                            content: "Impossible to retrieve a conference list"
+                            title: ' Unable to retrieve the list of conferences',
+                            content: "Impossible to retrieve a list of conference"
                         });
                         return -1;
                     }
@@ -93,7 +93,7 @@ app.controller('ConferencesController', ['$scope','ConferencesService','$ionicLo
             }else{
                 $ionicPopup.alert({
                     title: ' Unable to update conference list',
-                    content: "You don't have a internet connection"
+                    content: "You don't have a internet connexion"
                 });
             }
         };

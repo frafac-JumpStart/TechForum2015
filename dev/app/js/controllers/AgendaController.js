@@ -63,7 +63,7 @@ angular.module('app')
 
             $ionicPopup.confirm({
                 title: 'Delete conference',
-                content: 'Do you want delete this conference on your agenda ?'
+                content: 'Do you want to delete this conference from your agenda ?'
             }).then(function(res) {
                 if(res) {
                     if (localStorage.getItem('myAgenda') !== null) {
@@ -78,7 +78,7 @@ angular.module('app')
                                 $scope.myAgenda.splice(i, 1);
                         }
                     } else
-                        alert("Error - please can reload application");
+                        alert("Error - please reload the application");
                 }
             });
         };

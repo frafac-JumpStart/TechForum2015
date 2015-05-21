@@ -55,7 +55,7 @@ angular.module('app')
                 else{
                     $ionicPopup.alert({
                         title: 'Impossible',
-                        content: 'One conference already to add with the same to start'
+                        content: 'You already have booked a conference at this time'
                     });
                 }
             }
