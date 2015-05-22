@@ -16,6 +16,10 @@ mkdir www/app/data
 mkdir www/app/img
 mkdir www/app/js
 mkdir www/app/libs
+mkdir www/app/libs/angular-resource
+mkdir -p www/app/libs/ionic/release/css
+mkdir -p www/app/libs/ionic/release/js
+mkdir -p www/app/libs/ionic/release/fonts
 mkdir www/app/views
 
 echo "Copie des fichiers html"
@@ -30,6 +34,9 @@ cp -r dev/app/img/* www/app/img
 echo "Copie des  autres fichier "
 cp -r dev/app/css/* www/app/css
 cp -r dev/app/js/* www/app/js
-cp -r dev/app/libs/* www/app/libs
+cp -r dev/app/libs/angular-resource/angular-resource.min.js www/app/libs/angular-resource
+cp -r dev/app/libs/ionic/release/fonts/* www/app/libs/ionic/release/fonts
+cp -r dev/app/libs/ionic/release/css/ionic.min.css www/app/libs/ionic/release/css
+cp -r dev/app/libs/ionic/release/js/ionic.bundle.min.js www/app/libs/ionic/release/js
 
 echo "-- L'application TechForum 2015 contenu dans le dossier \"www\" peut être mise en production --"
