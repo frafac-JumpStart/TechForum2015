@@ -105,8 +105,7 @@ You should run on Mac OX
 $ cordova platform add ios
 $ cordova build ios
 Add Splascreen and Icon
-$  cp -r dev/res/ios/icons/ platforms/ios/TechForum\ eXplore\ 2015/Resources/icons
-$  cp -r dev/res/ios/splash platforms/ios/TechForum\ eXplore\ 2015/Resources/
+$  cp -r dev/res/ios/* platforms/ios/TechForum\ 2015/Resources
 To launch a emulator (update xcode before)
 $ cordova emulate ios
 ```
